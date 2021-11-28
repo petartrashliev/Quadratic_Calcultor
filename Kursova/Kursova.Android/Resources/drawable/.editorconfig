@@ -1,0 +1,5 @@
+# Rules in this file were initially inferred by Visual Studio IntelliCode from the C:\Users\Predator 17\Desktop\Kursova\Kursova\Kursova.Android\Resources\drawable\ codebase based on best match to current usage at 3.11.2021 г.
+# You can modify the rules from these initially generated values to suit your own policies
+# You can learn more about editorconfig here: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
+[*.cs]
+

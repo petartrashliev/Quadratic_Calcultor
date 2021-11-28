@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+       
+             x:Class="Kursova.MainPage">
+
+    <ContentPage.Content>
+        
+        <!-- User Interface (UI): QUADRATIC CALCULATOR -->
+        
+        <ScrollView>
+            <StackLayout 
+                
+                BackgroundColor="White" 
+                Padding="20">
+
+                <!-- Logo and Title -->
+                <Grid 
+                    BackgroundColor="White" 
+                    Padding="0" 
+                    HeightRequest="100" >
+
+                    <Grid 
+                        BackgroundColor="white" Margin="0,0,265,0"  >
+                        <Image 
+                            Source="logo.png"  ></Image>
+                    </Grid>
+
+                    <Grid 
+                        BackgroundColor="white" Margin="107,0,0,0" >
+
+                        <Label 
+                            Text="QUADRATIC" 
+                            FontSize="35" 
+                            Margin="0,10,0,0" 
+                            TextColor="Black" 
+                            FontAttributes="Bold"/>
+
+                        <Label 
+                            Text="CALCULATOR" 
+                            FontSize="13" 
+                            Margin="3,55,0,0" 
+                            TextColor="#999999" 
+                            FontAttributes="Bold"/>
+                    </Grid>
+
+                </Grid>
+
+
+                <!-- Quadratic Equation   -->
+                
+                <Grid BackgroundColor="White" Padding="0" HeightRequest="100" >
+
+                    <Grid BackgroundColor="white" Margin="0,0,0,70"  >
+                        <Label 
+                            Text="Quadratic Equation:" 
+                            FontSize="15" 
+                            Margin="0,10,0,0" 
+                            TextColor="black" 
+                            FontAttributes="None"/>
+                    </Grid>
+
+                    <Grid BackgroundColor="white" Margin="0,30,0,0"  >
+                        <Label Text="A" FontSize="26" Margin="61,18,0,0" TextColor="black" FontAttributes="Bold" />
+                        <Label Text="x" FontSize="24" Margin="80,18,0,0" TextColor="black" FontAttributes="None"/>
+                        <Label Text="2" FontSize="14" Margin="93,18,0,0" TextColor="#2E2D2D" FontAttributes="None" />
+                        <Label Text="+" FontSize="24" Margin="115,18,0,0" TextColor="#2E2D2D" FontAttributes="None" />
+                        <Label Text="B" FontSize="26" Margin="150,18,0,0" TextColor="black" FontAttributes="Bold" />
+                        <Label Text="x" FontSize="24" Margin="169,18,0,0" TextColor="#2E2D2D" FontAttributes="None" />
+                        <Label Text="+" FontSize="24" Margin="191,18,0,0" TextColor="#2E2D2D" FontAttributes="None" />
+                        <Label Text="C" FontSize="26" Margin="226,18,0,0" TextColor="black" FontAttributes="Bold" />
+                        <Label Text="=" FontSize="24" Margin="261,18,0,0" TextColor="#2E2D2D" FontAttributes="None" />
+                        <Label Text="0" FontSize="26" Margin="296,18,0,0" TextColor="#2E2D2D" FontAttributes="none" />
+                    </Grid>
+
+                </Grid>
+
+
+                <!-- Add values  -->
+                <Grid BackgroundColor="White" Padding="0" HeightRequest="100" >
+
+                    <Grid BackgroundColor="white" Margin="0,0,0,60"  >
+                        <Label 
+                            Text="Add Your Values:" 
+                            FontSize="15" 
+                            Margin="0,10,0,0" 
+                            TextColor="black" 
+                            FontAttributes="None"/>
+                    </Grid>
+
+                    <Grid BackgroundColor="white" Margin="0,40,0,12"  >
+
+                        <!--  A=  -->
+                        <Grid BackgroundColor="white" Margin="5,0,260,0"  >
+                            <Rectangle 
+                                Fill="white" 
+                                Stroke="black" 
+                                RadiusX="4" 
+                                RadiusY="4" Margin="0,0,0,6"/>
+                            <Entry 
+                                x:Name="a_1" 
+                                Placeholder="А =" 
+                                Keyboard="Numeric" 
+                                TextColor="green"  
+                                FontSize="20" 
+                                PlaceholderColor="black" 
+                                Margin="5,-5,5,0"/>
+                        </Grid>
+
+                        <!--  B=  -->
+                        <Grid BackgroundColor="white" Margin="126,0,135,0"  >
+                            <Rectangle 
+                                Fill="white" 
+                                Stroke="black" 
+                                RadiusX="4" 
+                                RadiusY="4" 
+                                Margin="0,0,0,6"/>
+                            <Entry 
+                                x:Name="b_1" 
+                                Placeholder="В =" 
+                                Keyboard="Numeric"
+                                TextColor="green" 
+                                FontSize="20" 
+                                PlaceholderColor="black" 
+                                Margin="5,-5,5,0"/>
+                        </Grid>
+
+                        <!--  C=  -->
+                        <Grid BackgroundColor="white" Margin="253,0,10,0"  >
+                            <Rectangle 
+                                Fill="white" 
+                                Stroke="black" 
+                                RadiusX="4" 
+                                RadiusY="4" 
+                                Margin="0,0,0,6"/>
+                            <Entry 
+                                x:Name="c_1" 
+                                Placeholder="C =" 
+                                Keyboard="Numeric" 
+                                TextColor="green"
+                                FontSize="20" 
+                                PlaceholderColor="black"
+                                Margin="5,-5,5,0"/>
+                        </Grid>
+                    </Grid>
+                    
+                </Grid>
+
+
+                <!--  Buttons   -->
+                <Grid  Padding="0" Margin="0,0,0,0" HeightRequest="60" >
+
+                    
+                    <!--  Button1: Clear  -->
+                    <Grid BackgroundColor="white" Margin="255,0,0,0"  >
+                        <Button 
+                            Clicked="Button_Clicked"  
+                            Text="Clear" 
+                            TextColor="white" 
+                            FontAttributes="None" 
+                            FontSize="15" 
+                            BackgroundColor="#191B2E"  
+                            Margin="0,0,0,0" />
+                    </Grid>
+
+                    <!--  Buton2: Calculate  -->
+                    <Grid BackgroundColor="white" Margin="0,0,117,0"  >
+                        <Button 
+                            Clicked="OnButtonClicked" 
+                            Text="Calculate" 
+                            TextColor="white" 
+                            FontAttributes="Bold" 
+                            FontSize="15" 
+                            BackgroundColor="#F4900C"  
+                            Margin="0,0,0,0" />
+                    </Grid>
+
+                </Grid>
+
+
+                <!--  Results   -->
+                <Grid BackgroundColor="white" Margin="0,12,0,1" Padding="0" HeightRequest="100" >
+
+                    <!--  Results: DESCRIMINANT   -->
+                    <Grid  Margin="0,0,0,50">
+
+                        <Grid  Margin="0,0,220,0">
+                            <Label 
+                                Text="Yor Descriminant is:" 
+                                FontSize="15" 
+                                Margin="0,15,0,0" 
+                                TextColor="black" 
+                                FontAttributes="None"/>
+                        </Grid>
+
+
+                        <Grid    Margin="145,5,117,5">
+                            <Rectangle 
+                                Fill="white" 
+                                Stroke="black"
+                                RadiusX="5" 
+                                RadiusY="5" />
+                            <Entry 
+                                x:Name="r_1" 
+                                Placeholder=" " 
+                                FontAttributes="bold" 
+                                IsReadOnly="True" 
+                                Keyboard="Numeric" 
+                                TextColor="green"  
+                                FontSize="20"  
+                                PlaceholderColor="black" 
+                                Margin="5,0,0,-7"/>
+                        </Grid>
+
+                    </Grid>
+
+                    
+                    <!--  Results: INFO   -->
+                    <Grid  Margin="0,50,0,0">
+
+                        <Grid  Margin="0,2,330,0">
+                            <Label 
+                                Text="Info:" 
+                                FontSize="15" 
+                                Margin="0,15,0,0" 
+                                TextColor="black" 
+                                FontAttributes="None"/>
+                        </Grid>
+
+                        <Grid  Margin="33,5,0,5">
+
+                            <Entry 
+                                x:Name="r_2" 
+                                FontAttributes="Italic"  
+                                IsReadOnly="True" 
+                                Keyboard="Numeric" 
+                                TextColor="green"  
+                                FontSize="14"  
+                                PlaceholderColor="black" 
+                                Margin="3,0,8,-6"/>
+                        </Grid>
+                    </Grid>
+
+                </Grid>
+
+                <!--  Results: X1 AND X2   -->  
+                <Grid  Padding="0" Margin="0,10,0,0" HeightRequest="50" >
+
+                    <!--  1  -->
+                    <Grid  Padding="0" HeightRequest="50" >
+                        <Label 
+                            Text="x1 is:" 
+                            FontSize="16" 
+                            Margin="38,15,0,0" 
+                            TextColor="black" 
+                            FontAttributes="bold"/>
+
+                        <Grid  Padding="0" HeightRequest="50" Margin="80,5,220,5" >
+                            <Rectangle  
+                                Stroke="black" 
+                                RadiusX="5" 
+                                RadiusY="5"
+                                Margin="0,0,0,1"/>
+                            <Entry 
+                                x:Name="x_1" 
+                                Placeholder=" "  
+                                IsReadOnly="True" 
+                                Keyboard="Numeric" 
+                                TextColor="black"  
+                                FontSize="20"  
+                                Margin="8,0,7,-6"/>
+                        </Grid>
+                    </Grid>
+
+                    <!--  2  -->
+                    <Grid  Margin="180,0,0,0" HeightRequest="50" >
+                        <Label 
+                            Text="x2 is:" 
+                            FontSize="16" 
+                            Margin="19,15,0,0" 
+                            TextColor="black" 
+                            FontAttributes="bold"/>
+                        
+                        <Grid  Padding="0" HeightRequest="50" Margin="60,5,60,5" >
+                            <Rectangle  
+                                Stroke="black" 
+                                RadiusX="5" 
+                                RadiusY="5" 
+                                Margin="0,0,0,0"/>
+                            <Entry 
+                                x:Name="x_2" 
+                                Placeholder=" " 
+                                IsReadOnly="True" 
+                                Keyboard="Numeric" 
+                                TextColor="black"  
+                                FontSize="20" 
+                                PlaceholderColor="black" 
+                                Margin="8,0,7,-7"/>
+                        </Grid>
+
+                    </Grid>
+
+                </Grid>
+
+                <!--  Expander1: Quadratic Equation Theory   -->
+                <Grid>
+                    
+                        <xct:Expander   Direction="Down"  Margin="0,13,0,0" >
+                            <xct:Expander.Header  >
+
+                                <Label  
+                                    Text="Quadratic Equation Theory" 
+                                    TextDecorations="Underline" 
+                                    TextColor="Black" 
+                                    Background="white" 
+                                    FontAttributes="Bold" 
+                                    FontSize="17" />
+                                
+                            </xct:Expander.Header>
+
+                            <Label Padding="10" FontSize="19"  >Quadratic equations are second-degree algebraic expressions and are of the form ax2 + bx + c = 0. 
+The word "Quadratic" is derived from the word "Quad" which means square. In other words, a quadratic equation is an “equation of degree 2.” There are many scenarios where a quadratic equation is used. Did you know that when a rocket is launched, its path is described by a quadratic equation? 
+Further, a quadratic equation has numerous applications in physics, engineering, astronomy. The quadratic equations are second-degree equations in x that have two answers for x. These two answers for x are also  called the roots of the quadratic equations and are designated as (α, β). We shall learn more about the roots of a quadratic equation in the below content.A quadratic equation is an algebraic expression of the second degree in x. The standard form of a quadratic equation is ax2 + bx + c = 0,
+where a, b are the coefficients, x is the variable, and c is the constant term.
+                            </Label>
+
+                        </xct:Expander>
+
+                </Grid>
+
+
+                <!--  Expander2: About this app   -->
+                <Grid  Padding="0"  >
+                    
+                    <xct:Expander   Direction="Down"  Margin="0,2,0,0" >
+                        <xct:Expander.Header >
+                            <Label  Text="About this app" TextDecorations="Underline" TextColor="Black" Background="white" FontAttributes="Bold" FontSize="17" />
+                        </xct:Expander.Header>
+
+
+                        <Label Margin="10,10,0,0" FontSize="18" BackgroundColor="white" >
+                            App v.1.0.1 --> Soon will be available v.2.0.2
+                        </Label>
+
+                    </xct:Expander>
+                    
+                </Grid>
+
+
+                <!--  PERSONAL LOGO   -->
+                <Grid BackgroundColor="white" Margin="0,30,0,0" HeightRequest="25" >
+
+                    <Image Source="petarlogo.png" Margin="-140,0,0,0" ></Image>
+                    <Label  Text="Petar Trashliev / 2021" TextColor="Black"  FontAttributes="none" FontSize="13" Margin="140,4,0,0" />
+                    
+                </Grid>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
