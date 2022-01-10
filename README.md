@@ -6,11 +6,11 @@
  This calculator is a quadratic equation solver that will solve a second-order polynomial equation such as ax2 + bx + c = 0 for x, where a ≠ 0, using the quadratic formula.
 The calculator solution will show work using the quadratic formula to solve the entered equation for real and complex roots. Calculator determines whether the discriminant (b2−4ac) is less than, greater than or equal to 0.
 
- - [ ] When b2−4ac=0 there is one real root.
+ - [ ] When  b2−4ac=0  there is one real root.
 
- - [ ] When b2−4ac>0 there are two real roots.
+ - [ ] When  b2−4ac>0  there are two real roots.
 
- - [ ] When b2−4ac<0 there are two complex roots.
+ - [ ] When  b2−4ac<0  there are two complex roots.
  
   ## Technologie  ##
 
